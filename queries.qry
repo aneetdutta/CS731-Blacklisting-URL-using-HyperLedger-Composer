@@ -1,0 +1,17 @@
+/** Sample queries for Commodity Trading business network
+*/
+
+query selectUrl {
+  description: "Select all commodities"
+  statement:
+      SELECT org.example.mynetwork.Url
+}
+
+query selectUrlByStatus {
+  description: "Select all commodities based on their main exchange"
+  statement:
+      SELECT org.example.mynetwork.Url
+          WHERE (status==_$status)
+}
+
+
